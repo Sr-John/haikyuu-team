@@ -1,128 +1,149 @@
-/* Tema e estilo da fonte */
+/* Tema All Black com detalhes do Karasuno */
 body {
-  background-color: #000;
-  font-family: 'Times New Roman', Times, serif;
+  background-color: #050505;
+  font-family: "Times New Roman", Times, serif;
   color: #fff;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
 }
 
 /* A logo */
 #lets-go {
-  position: relative;
+  margin-top: 30px;
   display: inline-block;
-  border: 10px solid black;
-  border-radius: 1ch;
-  text-align: center;
+  border: 4px solid #111;
+  border-radius: 10px;
   background-color: rgb(245, 111, 33);
+  padding: 10px;
 }
 
-/* Títulos */
-h1, h2, .h3-a {
-  position: absolute;
-  color: #fff;
-}
-
-h1 {
-  top: 0;
-  left: 64%;
-  font-size: 8vh;
-  margin-bottom: 0;
-}
-
-h2 {
-  top: 14%;
-  left: 60%;
-  font-size: 5vh;
-}
-
-.h3-a {
-  top: 65%;
-  left: 42%;
-  font-size: 5vh;
-}
-
-/* Botões principais */
-#butoes {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 80px;
-}
-
-#butoes button,
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 8px;
-  background-color: orange;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  align-self: center;
-}
-
-#butoes button:hover,
-button:hover {
-  background-color: darkorange;
-}
-
-.formulario button:hover {
-  background-color: #555;
-}
-
-/* Preencher os campos */
-label {
+/* Títulos alinhados perfeitamente com Flexbox */
+.titulos {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  margin: 40px auto;
-  width: 300px;
-  font-size: 30px;
-  color: white;
+  margin: 30px 0;
+}
+
+h1 {
+  font-size: 6vh;
+  margin: 0;
+  color: #fff;
+}
+h2 {
+  font-size: 3vh;
+  color: #ddd;
+  margin: 0;
+}
+h3 {
+  font-size: 3vh;
+  color: #ff7700;
+  margin: 0;
+}
+
+/* Formulário e Inputs */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 20px auto;
+}
+
+label {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
 }
 
 input {
-  display: block;
-  margin: 0 auto 20px auto;
-  width: 30%;
-  padding: 8px;
+  padding: 10px;
   font-size: 16px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  text-align: center;
+  width: 200px;
+  background-color: #222;
+  color: #fff;
 }
 
-/* Jogadores de Haikyuu */
+/* Botões principais */
+#butoes {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: #ff7700;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #d16000;
+}
+
+/* Botão de remover na tabela */
+.btn-remover {
+  background-color: #dc3545; /* Vermelho */
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+.btn-remover:hover {
+  background-color: #a71d2a;
+}
+
+/* Tabela de Jogadores */
 #team-table {
   color: #fff;
-  margin: 40px auto;
+  margin: 0 auto 40px auto;
   border-collapse: collapse;
-  width: 80%;
-  max-width: 700px;
-  background-color: #ff7700;
+  width: 90%;
+  max-width: 600px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden; /* Mantém as bordas arredondadas */
 }
 
 #team-table th {
   background-color: #ff7700;
   color: white;
+  padding: 15px;
+  font-size: 20px;
 }
 
-#team-table th,
 #team-table td {
-  border: 1px solid #b12f00;
-  padding: 12px;
+  border: 1px solid #333;
+  padding: 10px;
   text-align: center;
-  font-size: 40px;
+  vertical-align: middle;
+  font-size: 20px;
 }
 
 #team-table img {
-  width: 40vh;
-  border-radius: 10px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Foto redonda estilo perfil */
+  object-fit: cover;
+  border: 2px solid #ff7700;
 }
 
-p {
-  margin-top: 20%;
-  text-align: center;
+footer {
+  margin-top: auto;
+  padding: 20px;
+  color: #777;
 }
